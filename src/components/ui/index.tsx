@@ -36,3 +36,14 @@ export function StatusBadge({ children, tone = 'slate' }: { children: ReactNode;
   };
   return <span className={`inline-flex rounded-full px-2 py-1 text-xs font-medium ${tones[tone] || tones.slate}`}>{children}</span>;
 }
+
+export function LoadingPage() {
+  return (
+    <div className="flex h-screen items-center justify-center bg-slate-50">
+      <div className="text-center">
+        <Spinner className="mx-auto mb-4 h-8 w-8" />
+        <p className="text-slate-600">Loading...</p>
+      </div>
+    </div>
+  );
+}
